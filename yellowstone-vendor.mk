@@ -37,12 +37,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/lib/egl/libEGL_tegra.so:system/lib/egl/libEGL_tegra.so \
     vendor/google/yellowstone/proprietary/lib/egl/libGLESv1_CM_tegra.so:system/lib/egl/libGLESv1_CM_tegra.so \
     vendor/google/yellowstone/proprietary/lib/egl/libGLESv2_tegra.so:system/lib/egl/libGLESv2_tegra.so \
-    vendor/google/yellowstone/proprietary/lib/hw/audio.primary.tegra.so:system/lib/hw/audio.primary.tegra.so \
     vendor/google/yellowstone/proprietary/lib/hw/gps.brcm.so:system/lib/hw/gps.brcm.so \
     vendor/google/yellowstone/proprietary/lib/hw/sensors.tegra.so:system/lib/hw/sensors.tegra.so \
     vendor/google/yellowstone/proprietary/lib/hw/ts.default.so:system/lib/hw/ts.default.so \
     vendor/google/yellowstone/proprietary/lib/libjpegnv.so:system/lib/libjpegnv.so \
-    vendor/google/yellowstone/proprietary/lib/libnvoice.so:system/lib/libnvoice.so \
     vendor/google/yellowstone/proprietary/lib/libopencv24_tegra.so:system/lib/libopencv24_tegra.so \
     vendor/google/yellowstone/proprietary/lib/librm31080.so:system/lib/librm31080.so \
     vendor/google/yellowstone/proprietary/lib/librm_ts_service.so:system/lib/librm_ts_service.so \
@@ -50,7 +48,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/lib/libsensors.iio.lights.so:system/lib/libsensors.iio.lights.so \
     vendor/google/yellowstone/proprietary/lib/libstlport.so:system/lib/libstlport.so \
     vendor/google/yellowstone/proprietary/lib/libtbb.so:system/lib/libtbb.so \
-    vendor/google/yellowstone/proprietary/lib/libyellalsa.so:system/lib/libyellalsa.so \
     vendor/google/yellowstone/proprietary/lib/para_10_02_00_10.so:system/lib/para_10_02_00_10.so \
     vendor/google/yellowstone/proprietary/lib/para_10_02_00_20.so:system/lib/para_10_02_00_20.so \
     vendor/google/yellowstone/proprietary/lib/para_10_02_00_b0.so:system/lib/para_10_02_00_b0.so \
@@ -144,4 +141,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/lib/libtsechdcp.so:system/vendor/lib/libtsechdcp.so
 
 PRODUCT_PACKAGES += \
-    libnvos
+    libnvos \
+    libstagefrighthw \
+    audio.primary.tegra \
+    audio.nvwc.tegra \
+    audio.nvrc.tegra \
+    libnvoice \
+    libnvaudiofx

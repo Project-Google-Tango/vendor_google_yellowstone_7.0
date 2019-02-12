@@ -19,6 +19,55 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),yellowstone)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := audio.primary.tegra
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES := proprietary/vendor/lib/hw/audio.primary.tegra.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib/hw
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := audio.nvwc.tegra
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES := proprietary/vendor/lib/hw/audio.nvwc.tegra.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib/hw
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libstagefrighthw
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES := proprietary/vendor/lib/libstagefrighthw.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := audio.nvrc.tegra
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES := proprietary/vendor/lib/hw/audio.nvrc.tegra.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib/hw
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libnvoice
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES := proprietary/vendor/lib/libnvoice.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libnvaudiofx
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES := proprietary/vendor/lib/libnvaudiofx.so
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
+LOCAL_REQUIRED_MODULES := libc libc++ libdl libm libc libc++ libdl libm
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := libnvos
 LOCAL_MODULE_OWNER := google
 LOCAL_SRC_FILES := proprietary/vendor/lib/libnvos.so
@@ -26,7 +75,7 @@ LOCAL_MULTILIB := 32
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
-LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/vendor/lib
 include $(BUILD_PREBUILT)
 
 endif
